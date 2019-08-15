@@ -9,7 +9,10 @@ namespace WebCore.Models
 {
     public class MyContext : DbContext
     {
-        public DbSet<Blog> Blog { get; set;  }
-        public DbSet<Post> Post { get; set; }
+
+        public MyContext(DbContextOptions<MyContext> options): base(options)
+        {
+
+        }
     }
 }
